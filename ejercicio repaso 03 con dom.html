@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>realiza una suma de tres numeros</h1>
+    <form>
+        <label for="numero1">Introduce primer número</label>
+        <input type="number" id="numero1" />
+        <label for="numero2">Introduce segundo número</label>
+        <input type="number" id="numero2" />
+        <label for="numero3">Introduce tercer número</label>
+        <input type="number" id="numero3" />
+        <button type="submit">Calcular suma</button>
+        <span id="mensaje"></span>
+    </form>
+<script>
+const inputNumero1 = document.querySelector('#Numero1');
+const inputNumero2 = document.querySelector('#Numero2');
+const inputNumero3 = document.querySelector('#Numero3');
+const formulario  = document.querySelector('form');
+const spanMensaje = document.querySelector('#mensaje');
+const calcular = (e) =>  {
+    e.preventDefault();
+    let suma =  0;
+
+    if (inputNumero1.value.trim() === '' || InputNumero2.value.trim() === '' ||inputNumero3.value.trim() === '') {
+spanMensaje.textcontent = 'asegurate de introducir un numero'
+} else {
+    const numeros = [];
+numeros.push(parseInt(inmputNumero1.value));
+numeros.push(parseInt(inmputNumero2.value));
+numeros.push(parseInt(inmputNumero3.value));
+for (const n  of Numeros) {
+
+    suma += n ;
+}
+    spanMensaje.textContent = suma;
+}
+formulario.addEventListener('submit',calcular);
+</script>
+</body>
+</html>
